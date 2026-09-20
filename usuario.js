@@ -9,9 +9,16 @@ function validarAcceso() {
     while (intentos < MAXIMOINTENTOS && !accesoConcedido) {
         intentos++;
 
-
-
+        const usuarioIngredo = prompt("Ingrese su usuario(intento ${intentos} de {MAXIMOINTENTOS})");
+        const contraseñaIngresada = prompt("Ingrese su contraseña(intrnto ${intentos} de {MAXIMOINTENTOS}) ");
         
+        if (usuarioIngredo === USUARIOCORRECTO && contraseñaIngresada === CONTRASEÑACORRECTA) {
+          accesoConcedido = true;
+          console.log("Bienvenido al sistema");
+          alert("Bienvenido al sistema") 
+        }
+
+
         
     }
     
