@@ -16,6 +16,9 @@ function validarAcceso() {
           accesoConcedido = true;
           console.log("Bienvenido al sistema");
           alert("Bienvenido al sistema") 
+        }else if(intentos < MAXIMOINTENTOS) {
+            console.log("Datos incorrectos intento ${intentos} de {MAXIMOINTENTOS}");
+            alert("Datos incorrectos Intento ${intentos} de ${MAXMOINTENTOS}")
         }
 
 
