@@ -9,16 +9,19 @@ function validarAcceso() {
     while (intentos < MAXIMOINTENTOS && !accesoConcedido) {
         intentos++;
 
-        const usuarioIngredo = prompt("Ingrese su usuario(intento ${intentos} de {MAXIMOINTENTOS})");
-        const contraseñaIngresada = prompt("Ingrese su contraseña(intrnto ${intentos} de {MAXIMOINTENTOS}) ");
+        const usuarioIngresado = prompt("Ingrese su usuario(intento ${intentos} de ${MAXIMOINTENTOS})");
+        const contraseñaIngresada = prompt("Ingrese su contraseña(intrnto ${intentos} de ${MAXIMOINTENTOS}) ");
         
-        if (usuarioIngredo === USUARIOCORRECTO && contraseñaIngresada === CONTRASEÑACORRECTA) {
+        if (usuarioIngresado === USUARIOCORRECTO && contraseñaIngresada === CONTRASEÑACORRECTA) {
           accesoConcedido = true;
           console.log("Bienvenido al sistema");
-          alert("Bienvenido al sistema") 
+          alert("Bienvenido al sistema"); 
         }else if(intentos < MAXIMOINTENTOS) {
-            console.log("Datos incorrectos intento ${intentos} de {MAXIMOINTENTOS}");
-            alert("Datos incorrectos Intento ${intentos} de ${MAXMOINTENTOS}")
+            console.log("Datos incorrectos intento ${intentos} de ${MAXIMOINTENTOS}");
+            alert("Datos incorrectos Intento ${intentos} de ${MAXMOINTENTOS}");
+        }else {
+            console.log("Usuario bloqueado. Ha superado el número de intentos");
+            alert("Usuario bloqueado. Ha superado el número de intentos");
         }
 
 
@@ -26,3 +29,5 @@ function validarAcceso() {
     }
     
 }
+
+validarAcceso()
